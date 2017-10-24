@@ -25,14 +25,11 @@ public class CalcController {
 
     @PostMapping("/calc")
     public String calcSubmit(@ModelAttribute LoanInfo loanInfo, Model model) {
-
-       LoanResult loanResult = loanCalculatorService.getLoanresult(loanInfo);
-       model.addAttribute("loanResult",loanResult);
+        LoanResult loanResult = loanCalculatorService.getLoanResult(loanInfo);
+        model.addAttribute("loanResult", loanResult);
 
         return "result";
     }
-
-
 
 
 }

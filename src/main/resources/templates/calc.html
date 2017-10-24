@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
+    <link rel="stylesheet" href="/site.css"/>
 </head>
 <body>
 
 <form action="#" th:action="@{/calc}" th:object="${loanInfo}" method="post">
-    <p>Loan amount: <input type="text" th:field="*{amount}" /></p>
-    <p>Loan term in months:<input type="text" th:field="*{months}" /></p>
-    <p>Interest rate per year:<input type="text" th:field="*{rate}" /></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-</form>
 
+    <p>Loan amount: <input type="range" min="1000" max="100000" value="3000" step="100" class="slider" id="myRange"/>
+        <input type="text" id="sliderValue" th:field="*{amount}" /></p>
+    <p>Loan term in months: <input type="range" min="1" max="100" value="12" class="slider" id="myRange1"/>
+        <input type="text" id="sliderValue1" th:field="*{months}" /></p>
+    <p>Interest rate per year:<input type="text" th:field="*{rate}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+<script src="site.js"></script>
 </body>
 </html>

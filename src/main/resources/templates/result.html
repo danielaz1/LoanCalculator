@@ -6,15 +6,14 @@
 </head>
 <body>
 
-
-<p th:text="'Loan amount: ' + ${loanInfo.amount}" />
-<p th:text="'Loan term in months: ' + ${loanInfo.months}" />
-<p th:text="'Interest rate per year: ' + ${loanInfo.rate}" />
+<p th:text="'Loan amount: ' + ${loanInfo.amount}"/>
+<p th:text="'Loan term in months: ' + ${loanInfo.months}"/>
+<p th:text="'Interest rate per year: ' + ${loanInfo.rate}"/>
 
 <h1>Result</h1>
-<p th:text="'Monthly Payments: ' + ${loanResult.monthlyPayment}" />
-<p th:text="'Total Principal Paid ' + ${loanResult.totalPrincipalPaid}" />
-<p th:text="'Total Interest Paid ' + ${loanResult.totalInterestPaid}" />
+<p th:text="'Monthly Payments: ' + ${#numbers.formatDecimal(loanResult.monthlyPayment,3,2)}"/>
+<p th:text="'Total Principal Paid ' + ${loanResult.totalPrincipalPaid}"/>
+<p th:text="'Total Interest Paid ' + ${#numbers.formatDecimal(loanResult.totalInterestPaid,3,2)}"/>
 
 </body>
 </html>
