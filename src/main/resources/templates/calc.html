@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/calc}" th:object="${loanInfo}" method="post">
+    <p>Loan amount: <input type="text" th:field="*{amount}" /></p>
+    <p>Loan term in months:<input type="text" th:field="*{months}" /></p>
+    <p>Interest rate per year:<input type="text" th:field="*{rate}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+</body>
+</html>

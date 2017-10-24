@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+
+<p th:text="'Loan amount: ' + ${loanInfo.amount}" />
+<p th:text="'Loan term in months: ' + ${loanInfo.months}" />
+<p th:text="'Interest rate per year: ' + ${loanInfo.rate}" />
+
+<h1>Result</h1>
+<p th:text="'Monthly Payments: ' + ${loanResult.monthlyPayment}" />
+<p th:text="'Total Principal Paid ' + ${loanResult.totalPrincipalPaid}" />
+<p th:text="'Total Interest Paid ' + ${loanResult.totalInterestPaid}" />
+
+</body>
+</html>
